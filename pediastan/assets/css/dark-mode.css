@@ -1,0 +1,28 @@
+html[data-color-mode="dark"].header-top{
+  background-color: #1a1a1a;
+}
+
+html[data-color-mode="dark"]header.border-bottom {
+  background-color: #000;
+}
+
+html[data-color-mode="dark"].nav>ul>li>a {
+  color: #fff;
+}
+
+html[data-color-mode = "dark"]h3.text-uppercase.section-badge::after{
+  border-right: 17px solid #000;
+}
+
+html[data-color-mode = "dark"]span.material-symbols-outlined{
+  color: #fff;
+}
+
+html[data-color-mode = "dark"]#hero-section-link{
+  color: #000;
+}
+
+
+html[data-color-mode = "dark"]#market-rates>li>div>a{
+
+}
