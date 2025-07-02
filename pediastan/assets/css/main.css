@@ -81,6 +81,10 @@ a>i {
   display: flex;
 }
 
+.nav > ul > li > a {
+  margin-right: 30px;
+}
+
 ul {
   list-style: none;
   display: inline-flex;
@@ -112,7 +116,7 @@ ul {
 }
 
 .menu {
-  height: 76px;
+  height: 82px;
   padding-top: 0.5rem;
 }
 
@@ -120,6 +124,7 @@ ul {
   border-radius: 57%;
   padding: 4px 7px 4px 7px;
   box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, .1);
+  cursor: pointer;
 }
 
 #navigation ul.menu>li,
@@ -136,12 +141,13 @@ ul {
 }
 
 .herosection-column-1 {
-  background-image: url(/assets/images/untitled-folder/1586d791-fa72-4df8-ba75-38e36acf1bf2.webp);
-  height: var(--bgh);
-  background-repeat: no-repeat;
+  height: var(--bgh); 
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #000 100%),
+  url('/pediastan/assets/images/untitled-folder/8be069a9-ff24-4f0a-a80a-177189573e9a.jpeg');
   background-size: cover;
-  background-position: center;
-
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply; 
 }
 
 .herosection-col-2{
@@ -150,13 +156,19 @@ ul {
 
 
 .herosection-col-2-row-1-col-1 {
-  background-image: url(/pediastan/assets/images/untitled-folder/8be069a9-ff24-4f0a-a80a-177189573e9a.jpeg);
-  background-repeat: no-repeat;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #000 100%),
+  url('/pediastan/assets/images/untitled-folder/8be069a9-ff24-4f0a-a80a-177189573e9a.jpeg');
   background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply; 
+  /* background-image: url(/pediastan/assets/images/untitled-folder/8be069a9-ff24-4f0a-a80a-177189573e9a.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover; */
   margin-bottom: var(--pcgap);
   display: flex;
   align-items: flex-end;
-  background-position: bottom;
+  /* background-position: bottom; */
   height: 228px;
   gap: var(--pcgap);
 }

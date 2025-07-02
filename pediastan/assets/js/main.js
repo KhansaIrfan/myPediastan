@@ -21,31 +21,34 @@ rightSideBar.addEventListener('click', function () {
 let img = document.querySelector(".herosection-column-1");
 
 let slider = [{
-    photoURL: "./assets/images/untitled-folder/1586d791-fa72-4df8-ba75-38e36acf1bf2.webp"
+    photoURL: "/pediastan/assets/images/untitled-folder/1586d791-fa72-4df8-ba75-38e36acf1bf2.webp"
   },
   {
-    photoURL: "./assets/images/untitled-folder/8be069a9-ff24-4f0a-a80a-177189573e9a.jpeg"
+    photoURL: "/pediastan/assets/images/untitled-folder/8be069a9-ff24-4f0a-a80a-177189573e9a.jpeg"
   },
   {
-    photoURL: "./assets/images/untitled-folder/533a0f26-e32b-47b8-9023-4c6eef1012e0.jpeg"
+    photoURL: "/pediastan/assets/images/untitled-folder/533a0f26-e32b-47b8-9023-4c6eef1012e0.jpeg"
   }
 ];
 
 let id = 0;
 
 function updateSlider() {
-  const {
-    photoURL
-  } = slider[id];
+  const { photoURL} = slider[id];
   img.style.backgroundImage = `url(${photoURL})`;
 
   setTimeout(() => {
+  img.style.transition = "all ease-in";
+  img.style.backgroundSize = "cover";
+  img.style.backgroundImage = `linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #000 100%), url('${photoURL}')`;
+  img.style.backgroundPosition = "center";
+  img.style.backgroundRepeat = "no-repeat";
+  img.style.backgroundBlendMode = "multiply";
     id = (id + 1) % slider.length;
     console.log("I am auto update");
     updateSlider();
 
-    img.style.transition = "all ease-in";
-    img.style.backgroundSize = "cover";
+
   }, 9000);
 }
 
