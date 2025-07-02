@@ -25,10 +25,6 @@
 }
 
 
-ul#market-rates>li>div>a{
-  color: #fff;
-}
-
 body {
   font-family: var(--pcbody-font);
   color: var(--pctext-cl);
@@ -92,14 +88,27 @@ ul {
 }
 
 .light-logo {
-  max-height: 63px;
+  max-height: 70px;
   padding: 12px 0px;
+  object-fit: cover;
+}
+.footer-content.logo {
+  padding: 12px 0px;
+  object-fit: cover;
+}
+.dark-logo{
+  max-height: 70px;
+  padding: 12px 0px;
+  object-fit: cover;
 }
 
-.dark-logo{
-  max-height: 63px;
-  padding: 12px 0px;
-  width: fit-content;
+.fa-moon{
+  color: #fff;
+  padding: 2px;
+}
+
+.fa-sun{
+  color:#000;
 }
 
 .menu {
@@ -373,8 +382,13 @@ span.material-symbols-outlined {
   border-bottom: none;
 }
 
-table tr:last-child {
-  border-bottom: #fff;
+table tbody > tr:last-child{
+  border-color: #fff;
+  --bs-table-color: #000 !important;
+}
+
+table thead > tr:last-child {
+  border-color: var(--pcborder-clr) !important;
 }
 
 .facebook {
@@ -420,6 +434,7 @@ table tr:last-child {
   font-size: 13px;
   display: inline-block;
   line-height: 2;
+  color: #000;
 
   &:hover {
     color: #1ea369;
@@ -528,7 +543,10 @@ table tr:last-child {
 
 @media screen and (max-width:768px) {
 
-
+  i.fa-solid.fa-bars{
+    color: #000;
+    font-size: 25px;
+  }
 
   .header-top {
     height: 90px;
@@ -682,9 +700,40 @@ table tr:last-child {
     margin-bottom: 30px;
   }
 
+  .mobile-menu i.fa-brands.fa-facebook-f {
+    color: #000;
+  }
+
+  .mobile-menu i.fa-brands.fa-instagram {
+    color: #000;
+  }
+
+  .mobile-menu i.fa-brands.fa-youtube {
+    color: #000;
+  }
+
+  .mobile-menu i.fa-solid.fa-envelope{
+    color: #000;
+  }
+
 }
 
 @media screen and (max-width:576px) {
+
+  .mobile-menu i.fa-solid.fa-envelope{
+    color: #000;
+  }
+
+  .mobile-menu i.fa-brands.fa-facebook-f {
+    color: #000;
+  }
+
+  .mobile-menu i.fa-solid.fa-bars{
+    color: #000;
+    font-size: 25px;
+  }
+
+
   .mobile-menu {
     position: absolute;
     top: 0px;

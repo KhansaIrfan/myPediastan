@@ -56,40 +56,37 @@ updateSlider();
 /* Theme color setting*/
 
 let themeButton = document.querySelector(".theme");
-let body = document.querySelector("body");
-let lightMode = document.querySelector(".light-mode");
-let darkMode = document.querySelector(".dark-mode");
 let sunIcon = document.querySelector(".fa-sun");
 let moonIcon = document.querySelector(".fa-moon");
-let darkLogo = document.querySelector(".dark-logo");
-let lightLogo = document.querySelector(".light-logo");
+let darkLogos = document.querySelectorAll(".dark-logo");
+let lightLogos = document.querySelectorAll(".light-logo");
+let html = document.documentElement; // <html> element
 
 let isDark = false;
+
+// Initial Setup
+html.setAttribute("data-color-mode", "light");
 moonIcon.classList.add("d-none");
 sunIcon.classList.remove("d-none");
-themeButton.addEventListener('click', (e) => {
-  isDark =!isDark;
-  if (!isDark) {//light mode
-    document.body.style.backgroundColor = "#fff";
-    document.body.style.color = "#000";
-    moonIcon.classList.add("d-none");
-    sunIcon.classList.remove("d-none");
-    sunIcon.style.color = "#000";
-    darkLogo.classList.add("d-none");
-    lightLogo.classList.remove("d-none");
-    console.log("Light is active");
+darkLogos.forEach(logo => logo.classList.add("d-none"));
+lightLogos.forEach(logo => logo.classList.remove("d-none"));
 
-  } else {//dark mode
-    document.body.style.backgroundColor = "#000";
-    document.body.style.color = "#fff";
+themeButton.addEventListener('click', () => {
+  isDark = !isDark;
+
+  if (isDark) {
+    html.setAttribute("data-color-mode", "dark");
     sunIcon.classList.add("d-none");
     moonIcon.classList.remove("d-none");
-    darkLogo.classList.remove("d-none");
-    lightLogo.classList.add("d-none");
-    moonIcon.style.color = "#fff";
-    moonIcon.style.padding = "1px 2px 1px 2px";
+    darkLogos.forEach(logo => logo.classList.remove("d-none"));
+    lightLogos.forEach(logo => logo.classList.add("d-none"));
     console.log("Dark is active");
-    darkLogo.classList.remove("d-none");
-    lightLogo.classList.add("d-none");
+  } else {
+    html.setAttribute("data-color-mode", "light");
+    moonIcon.classList.add("d-none");
+    sunIcon.classList.remove("d-none");
+    darkLogos.forEach(logo => logo.classList.add("d-none"));
+    lightLogos.forEach(logo => logo.classList.remove("d-none"));
+    console.log("Light is active");
   }
-})
+});

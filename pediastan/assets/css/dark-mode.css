@@ -1,28 +1,128 @@
-html[data-color-mode="dark"].header-top{
+html[data-color-mode="dark"] body {
+  background-color: #000;
+  color: #fff;
+}
+
+html[data-color-mode="light"] body {
+  background-color: #fff;
+  color: #000;
+}
+
+html[data-color-mode="dark"] .header-top {
   background-color: #1a1a1a;
 }
 
-html[data-color-mode="dark"]header.border-bottom {
+html[data-color-mode="dark"] header.border-bottom {
   background-color: #000;
 }
 
-html[data-color-mode="dark"].nav>ul>li>a {
-  color: #fff;
+html[data-color-mode="dark"] .nav>ul>li>a {
+  color: #fff !important;
 }
 
-html[data-color-mode = "dark"]h3.text-uppercase.section-badge::after{
+/* html[data-color-mode="dark"] i#dark-mode{ color: #fff;} */
+
+html[data-color-mode="dark"] h3.text-uppercase.section-badge::after {
   border-right: 17px solid #000;
 }
 
-html[data-color-mode = "dark"]span.material-symbols-outlined{
+html[data-color-mode="dark"] span.material-symbols-outlined {
   color: #fff;
 }
 
-html[data-color-mode = "dark"]#hero-section-link{
+html[data-color-mode="dark"] #hero-section-link {
   color: #000;
 }
 
 
-html[data-color-mode = "dark"]#market-rates>li>div>a{
+html[data-color-mode="dark"] #market-rates a {
+  color: #fff !important;
+}
 
+html[data-color-mode="dark"] #market-rates li,
+#market-rates a {
+  border-bottom: 1px solid #313131;
+}
+
+html[data-color-mode="dark"] #market-rates li:last-child {
+  border-color: #000;
+}
+
+html[data-color-mode="dark"] .featured-title h3 a {
+  color: #fff !important;
+}
+
+html[data-color-mode="dark"] .horizontal-featured-news a {
+  color: #fff !important;
+}
+
+html[data-color-mode="dark"] .dark-logo {
+  display: block;
+}
+
+html[data-color-mode="dark"] .table,
+table tr:last-child {
+  --bs-table-color: #fff;
+  --bs-table-bg: transparent;
+  border-color: #313131;
+}
+
+html[data-color-mode="light"]table tbody>tr:last-child {
+  border-color: #000 !important;
+  --bs-table-color: #fff !important;
+}
+
+html[data-color-mode="dark"]table>thead>tr:last-child {
+  color: #fff !important;
+}
+
+html[data-color-mode="dark"] table tbody>tr:last-child,
+table thead>tr:last-child {
+  --bs-table-color: #fff !important;
+}
+
+html[data-color-mode="dark"] table thead>tr:last-child {
+  color: #fff !important;
+  border-color: #313131 !important;
+}
+
+html[data-color-mode="dark"] .social,
+.social-title {
+  color: #fff;
+}
+
+html[data-color-mode="dark"] .mobile-menu-button i.fa-solid.fa-bars {
+  color: #fff;
+  font-size: 25px;
+}
+
+
+html[data-color-mode="dark"] .sidebar-nav.mobile-menu.active {
+  background-color: #000 !important;
+  color: #fff;
+  padding: 20px;
+}
+
+html[data-color-mode="dark"] i.fa-brands.fa-facebook-f {
+  color: #fff;
+}
+
+html[data-color-mode="dark"] i.fa-brands.fa-instagram {
+  color: #fff;
+}
+
+html[data-color-mode="dark"] i.fa-brands.fa-youtube {
+  color: #fff;
+}
+
+html[data-color-mode="dark"] i.fa-solid.fa-envelope {
+  color: #fff;
+}
+
+html[data-color-mode="dark"] .mobile-menu-item {
+  color: #fff !important;
+}
+
+html[data-color-mode="dark"] .section-1 {
+  border: 1px solid #313131;
 }

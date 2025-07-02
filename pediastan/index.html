@@ -19,6 +19,7 @@
   <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/dark-mode.css">
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,7 +68,7 @@
 
         <!--Mobile Navigation-->
         <div class="mobile-menu-button d-block d-lg-none">
-          <i class="fa-solid fa-bars" style="color: #000; font-size: 25px;"></i>
+          <i class="fa-solid fa-bars"></i>
         </div>
 
         <!--Mobile Navigation-->
@@ -116,8 +117,8 @@
           </div>
           
           <div class="theme border ms-3">
-            <i class="fa-solid fa-moon" style="color: #000;" id="dark-mode"></i>
-            <i class="fa-solid fa-sun" style="color: #000;" id="light-mode"></i>
+            <i class="fa-solid fa-moon" id="dark-mode"></i>
+            <i class="fa-solid fa-sun"  id="light-mode"></i>
             <!-- <span class="material-symbols-outlined">
                       clear_day
                       </span> -->
@@ -1086,11 +1087,11 @@
             <ul class="m-0 p-0 d-flex flex-column" id="market-rates">
               <li class="mb-2">
                 <table class="table  text-center">
-                  <thead class="fw-semibold">
+                  <thead class="fw-semibold ">
                     <tr>
-                      <th class="fw-semibold text-start">Currency</th>
-                      <th class="fw-semibold text-center">Buying</th>
-                      <th class="fw-semibold">Selling</th>
+                      <th class="fw-semibold text-start text-dark">Currency</th>
+                      <th class="fw-semibold text-center text-dark">Buying</th>
+                      <th class="fw-semibold text-dark">Selling</th>
                     </tr>
                   </thead>
                   <tbody id="currency-rates">
@@ -1392,9 +1393,9 @@
               </div>
               <div class="footer-content d-flex flex-column">
                 <div class="logo">
-                  <a href="https://www.pediastan.com/">
+                  <a href="https://www.pediastan.com/" class="d-flex">
                     <img src="./assets/images/logo/logo.webp" alt="" width="50%" class="light-logo">
-                    <img src="./assets/images/logo/light-logo.webp" alt="" class="d-none dark-logo">
+                    <img src="./assets/images/logo/light-logo.webp" alt="" class="dark-logo">
                   </a>
                 </div>
                 <div>
@@ -1575,67 +1576,73 @@
     <div class="sidebar-nav mobile-menu">
 
       <div class="mobile-logo col-xl-6 col-lg-5">
-        <img src="./assets/images/logo/logo.webp" alt="">
+        <div class="logo col-xl-4 text-center text-lg-start">
+          <a href="https://www.pediastan.com/">
+            <img src="./assets/images/logo/logo.webp" alt="" class="light-logo">
+            <img src="./assets/images/logo/light-logo.webp" alt="" class="d-none dark-logo">
+          </a>
+        </div>
+
       </div>
       <div class="social-icons">
         <a href="https://www.facebook.com/Pediastan">
-          <i class="fa-brands fa-facebook-f text-dark"></i>
+          <i class="fa-brands fa-facebook-f"></i>
         </a>
         <a href="https://www.instagram.com/pediastan/#">
-          <i class="fa-brands fa-instagram text-dark"></i>
+          <i class="fa-brands fa-instagram"></i>
         </a>
         <a href="https://www.youtube.com/channel/UCmzlUXAceYLJ5dCs82ZJLdQ">
-          <i class="fa-brands fa-youtube text-dark"></i>
+          <i class="fa-brands fa-youtube"></i>
         </a>
         <a href="mailto:info@pediastan.com">
-          <i class="fa-solid fa-envelope text-dark"></i>
+          <i class="fa-solid fa-envelope"></i>
         </a>
       </div>
 
       <div class="">
         <ul class="list-group">
           <li class="">
-            <a href="./index.html" class="active text-uppercase">
+            <a href="./index.html" class="active text-uppercase mobile-menu-item">
               Home
             </a>
           </li>
           <li class="">
-            <a href="./index.html" class="text-uppercase">
+            <a href="./index.html" class="text-uppercase mobile-menu-item">
               News
             </a>
           </li>
           <li>
-            <a href="" class="text-uppercase">
+            <a href="" class="text-uppercase mobile-menu-item">
               health
             </a>
           </li>
           <li>
-            <a href="" class="text-uppercase">
+            <a href="" class="text-uppercase mobile-menu-item">
               automotive
             </a>
           </li>
           <li>
-            <a href="" class="text-uppercase">
+            <a href="" class="text-uppercase mobile-menu-item">
               technology
             </a>
           </li>
           <li>
-            <a href="" class="text-uppercase">
+            <a href="" class="text-uppercase mobile-menu-item">
               business
             </a>
           </li>
           <li>
-            <a href="" class="text-uppercase">
+            <a href="" class="text-uppercase mobile-menu-item">
               sports
             </a>
           </li>
           <li>
-            <a href="" class="text-uppercase">
+            <a href="" class="text-uppercase mobile-menu-item">
               Education
             </a>
           </li>
           <li>
-            <a href="" class="text-uppercase">
+            <a href="" class="text-uppercase mobile-menu-item">
               entertainment
             </a>
           </li>
