@@ -150,7 +150,7 @@ ul {
 
 
 .herosection-col-2-row-1-col-1 {
-  background-image: url(/assets/images/untitled-folder/8be069a9-ff24-4f0a-a80a-177189573e9a.jpeg);
+  background-image: url(/pediastan/assets/images/untitled-folder/8be069a9-ff24-4f0a-a80a-177189573e9a.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: var(--pcgap);
@@ -427,8 +427,7 @@ table thead > tr:last-child {
   padding: 6px;
 }
 
-.social,
-.social-title {
+.social, .social-title {
   font-family: var(--pchead-font);
   font-weight: 500;
   font-size: 13px;
@@ -542,6 +541,13 @@ table thead > tr:last-child {
 }
 
 @media screen and (max-width:768px) {
+
+  .light-logo {
+    max-height: 70px;
+    padding: 12px 0px;
+    object-fit: contain;
+    object-position: left;
+}
 
   i.fa-solid.fa-bars{
     color: #000;

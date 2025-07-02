@@ -87,7 +87,7 @@ html[data-color-mode="dark"] table thead>tr:last-child {
 }
 
 html[data-color-mode="dark"] .social,
-.social-title {
+html[data-color-mode="dark"] .social-title {
   color: #fff;
 }
 
