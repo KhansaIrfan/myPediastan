@@ -61,13 +61,13 @@ html[data-color-mode="dark"] .dark-logo {
 }
 
 html[data-color-mode="dark"] .table,
-table tr:last-child {
+table > tbody > tr:last-child {
   --bs-table-color: #fff;
   --bs-table-bg: transparent;
-  border-color: #313131;
+  border-bottom: none;
 }
 
-html[data-color-mode="light"]table tbody>tr:last-child {
+html[data-color-mode="light"] table> tbody>tr:last-child {
   border-color: #000 !important;
   --bs-table-color: #fff !important;
 }
@@ -76,18 +76,15 @@ html[data-color-mode="dark"]table>thead>tr:last-child {
   color: #fff !important;
 }
 
-html[data-color-mode="dark"] table tbody>tr:last-child,
-table thead>tr:last-child {
-  --bs-table-color: #fff !important;
+html[data-color-mode="dark"]th {
+  color: #fff;
 }
 
-html[data-color-mode="dark"] table thead>tr:last-child {
-  color: #fff !important;
-  border-color: #313131 !important;
+html[data-color-mode="dark"] th.fw-semibold {
+  border-bottom-color: #313131;
 }
 
-html[data-color-mode="dark"] .social,
-html[data-color-mode="dark"] .social-title {
+html[data-color-mode="dark"] span.text-uppercase.social-title {
   color: #fff;
 }
 
@@ -126,3 +123,5 @@ html[data-color-mode="dark"] .mobile-menu-item {
 html[data-color-mode="dark"] .section-1 {
   border: 1px solid #313131;
 }
+
+

@@ -19,40 +19,23 @@ rightSideBar.addEventListener('click', function () {
 
 /*code for image carousel*/
 let img = document.querySelector(".herosection-column-1");
+let accessKey = "hsUnn4EcKnH88irrTEpnnz6cHrjJcDLEXxJW-99mHic";
+const query = "Pakistan";
 
-let slider = [{
-    photoURL: "/pediastan/assets/images/untitled-folder/1586d791-fa72-4df8-ba75-38e36acf1bf2.webp"
-  },
-  {
-    photoURL: "/pediastan/assets/images/untitled-folder/8be069a9-ff24-4f0a-a80a-177189573e9a.jpeg"
-  },
-  {
-    photoURL: "/pediastan/assets/images/untitled-folder/533a0f26-e32b-47b8-9023-4c6eef1012e0.jpeg"
-  }
-];
-
+let slider = [];
 let id = 0;
 
-function updateSlider() {
-  const { photoURL} = slider[id];
-  img.style.backgroundImage = `url(${photoURL})`;
-
-  setTimeout(() => {
-  img.style.transition = "all ease-in";
-  img.style.backgroundSize = "cover";
-  img.style.backgroundImage = `linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #000 100%), url('${photoURL}')`;
-  img.style.backgroundPosition = "center";
-  img.style.backgroundRepeat = "no-repeat";
-  img.style.backgroundBlendMode = "multiply";
+fetch(`https://api.unsplash.com/search/photos?query=${query}&per_page=5&client_id=${accessKey}`)
+.then(res => res.json())
+.then(data => {
+  slider = data.results.map(img => img.urls.full);
+  img.style.backgroundImage = `url(${slider[0]})`;
+  setInterval(() => {
     id = (id + 1) % slider.length;
-    console.log("I am auto update");
-    updateSlider();
-
-
+    img.style.backgroundImage = `url(${slider[id]})`;
   }, 9000);
-}
-
-updateSlider();
+})
+.catch(err => console.error("Error fetching images:", err));
 
 
 
@@ -93,3 +76,30 @@ themeButton.addEventListener('click', () => {
     console.log("Light is active");
   }
 });
+
+/* Current Date Code */
+
+let dateElement = document.querySelector("#date");
+
+let today = new Date();
+
+let options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric"
+};
+
+let formattedDate = today.toLocaleDateString("en-US", options);
+
+dateElement.innerHTML = `${formattedDate} &nbsp; - &nbsp;`;
+
+
+/* API code for images */
+
+
+
+fetch('https://fakestoreapi.com/products/1')
+            .then(res=>res.json())
+            .then(json=>console.log(json))
+            
