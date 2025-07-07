@@ -92,23 +92,25 @@ ul {
   padding: 12px 0px;
   object-fit: cover;
 }
+
 .footer-content.logo {
   padding: 12px 0px;
   object-fit: cover;
 }
-.dark-logo{
+
+.dark-logo {
   max-height: 70px;
   padding: 12px 0px;
   object-fit: cover;
 }
 
-.fa-moon{
+.fa-moon {
   color: #fff;
   padding: 2px;
 }
 
-.fa-sun{
-  color:#000;
+.fa-sun {
+  color: #000;
 }
 
 .menu {
@@ -118,9 +120,11 @@ ul {
 
 .theme {
   border-radius: 57%;
-  padding: 4px 7px 4px 7px;
-  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, .1);
+  padding: 2px 5px 0px 5px;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, .1);
   cursor: pointer;
+  width: 25px;
+  height: 25px;
 }
 
 #navigation ul.menu>li,
@@ -143,8 +147,10 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  transition: opacity 1s ease-in;
+  overflow: hidden; 
+  transition: opacity 0.3s ease-in;
 }
+
 
 
 
@@ -157,6 +163,7 @@ ul {
   align-items: flex-end;
   background-position: bottom;
   height: 228px;
+  overflow: hidden;
 }
 
 
@@ -237,7 +244,7 @@ h3.text-uppercase.section-badge::after {
   height: 0;
   border-top: 15px solid transparent;
   border-bottom: 17px solid transparent;
-  border-right: 17px solid #fff ;
+  border-right: 17px solid #fff;
   position: relative;
   left: 16px;
   top: 11px;
@@ -379,13 +386,8 @@ span.material-symbols-outlined {
   border-bottom: none;
 }
 
-table tbody > tr:last-child{
-  border-color: #fff;
-  --bs-table-color: #000 !important;
-}
-
-table thead > tr:last-child {
-  border-color: var(--pcborder-clr) !important;
+table thead>tr:last-child {
+  border-color: var(--pcborder-clr);
 }
 
 .facebook {
@@ -424,13 +426,16 @@ table thead > tr:last-child {
   padding: 6px;
 }
 
+#currency-rates tr:last-child td {
+  border: none;
+}
 
 
 
 span.text-uppercase.social-title {
   font-family: var(--pchead-font);
   font-weight: 500;
-  font-size: 13px;
+  font-size: 12px;
   display: inline-block;
   line-height: 2;
   color: #000;
@@ -439,9 +444,11 @@ span.text-uppercase.social-title {
     color: #1ea369;
   }
 }
+
 th {
   color: #000;
 }
+
 .footer {
   border-top: 1px solid #191919;
   padding: 40px 0px;
@@ -474,24 +481,30 @@ th {
 }
 
 
-.footer-copyright{
+.footer-copyright {
   font-family: var(--pcbody-font);
   font-size: 14px;
   color: #999;
   font-style: italic;
 }
 
-.footer-copyright a{
-  color: #1ea369 !important; 
+.footer-copyright a {
+  color: #1ea369 !important;
   font-size: 14px;
   font-family: var(--pcbody-font);
 }
 
-.footer-social-title{
+.footer-social-title {
   font-family: var(--pcbody-font);
   font-weight: 700;
   color: #999;
 }
+
+.footer-social-border{
+  border-bottom: 1px solid #313131;
+}
+
+
 
 @media screen and (max-width:1080px) and (min-width: 1920px) {
   .mobile-complete-menu {
@@ -502,6 +515,14 @@ th {
     margin-bottom: 0px !important;
     margin-top: 0px !important;
   }
+  .theme {
+    border-radius: 57%;
+    padding: 0.5px 3.5px 0px 3.5px;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+}
 }
 
 @media screen and (max-width:1024px) {
@@ -520,12 +541,12 @@ th {
   }
 
   .theme {
-    border-radius: 50%;
-    padding: 2px 7px 4px 5px;
-    box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, .1);
-    width: 25px;
-    height: 25px;
+    border-radius: 57%;
+    padding: 0px 3px 0px 3.5px;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, .1);
     cursor: pointer;
+    width: 22px;
+    height: 22px;
   }
 
   .content {
@@ -560,7 +581,7 @@ th {
 
 @media screen and (max-width:768px) {
 
-  i.fa-solid.fa-bars{
+  i.fa-solid.fa-bars {
     color: #000;
     font-size: 25px;
   }
@@ -727,7 +748,7 @@ th {
     color: #000;
   }
 
-  .mobile-menu i.fa-solid.fa-envelope{
+  .mobile-menu i.fa-solid.fa-envelope {
     color: #000;
   }
 
@@ -740,7 +761,7 @@ th {
 
 @media screen and (max-width:576px) {
 
-  .mobile-menu i.fa-solid.fa-envelope{
+  .mobile-menu i.fa-solid.fa-envelope {
     color: #000;
   }
 
@@ -748,7 +769,7 @@ th {
     color: #000;
   }
 
-  .mobile-menu i.fa-solid.fa-bars{
+  .mobile-menu i.fa-solid.fa-bars {
     color: #000;
     font-size: 25px;
   }

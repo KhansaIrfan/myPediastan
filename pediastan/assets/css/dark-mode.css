@@ -60,20 +60,18 @@ html[data-color-mode="dark"] .dark-logo {
   display: block;
 }
 
-html[data-color-mode="dark"] .table,
-table > tbody > tr:last-child {
-  --bs-table-color: #fff;
+html[data-color-mode="dark"] table {
   --bs-table-bg: transparent;
+  --bs-table-color: #fff
+}
+
+html[data-color-mode="dark"] table > tbody > tr{
+  border-bottom: 1px solid #313131;
+}
+
+html[data-color-mode="light"] table > tbody > tr:last-child {
   border-bottom: none;
-}
-
-html[data-color-mode="light"] table> tbody>tr:last-child {
-  border-color: #000 !important;
-  --bs-table-color: #fff !important;
-}
-
-html[data-color-mode="dark"]table>thead>tr:last-child {
-  color: #fff !important;
+  color: #fff;
 }
 
 html[data-color-mode="dark"]th {
@@ -122,6 +120,15 @@ html[data-color-mode="dark"] .mobile-menu-item {
 
 html[data-color-mode="dark"] .section-1 {
   border: 1px solid #313131;
+}
+
+html[data-color-mode = "dark"].border-bottom.pb-5.border-black{
+  color: #fff;
+}
+
+
+html[data-color-mode = "dark"].footer-social-border{
+    border-bottom: 1px solid #313131;
 }
 
 
