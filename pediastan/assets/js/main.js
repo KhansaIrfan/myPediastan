@@ -19,7 +19,7 @@ rightSideBar.addEventListener('click', function () {
 
 /*code for image carousel*/
 let news = document.querySelector(".hero-section");
-let apiKey = "200edffdfb4c4b91a6d36bd7d427ea3d";
+const apiKey = "200edffdfb4c4b91a6d36bd7d427ea3d";
 let imgAccessKey = "hsUnn4EcKnH88irrTEpnnz6cHrjJcDLEXxJW-99mHic";
 let newsTitle = document.querySelectorAll("#hero-section-link");
 let img1 = document.querySelector(".herosection-column-1");
@@ -181,7 +181,7 @@ function fetchImages() {
           img2[key].style.alignItems = "flex-end";
           img2[key].style.backgroundPosition = "bottom";
           img2[key].style.height = "228px";
-          img2[key].style.overFlow = "hidden"
+          img2[key].style.overFlow = "hidden";
           console.log(" 2nd Section exist");
 
           setInterval(() => {
