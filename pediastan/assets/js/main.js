@@ -157,7 +157,6 @@ function fetchImages() {
       let lahoreSlider = data.results.map(img => img.urls.full);
       if (img1) {
         img1.style.backgroundImage = `url(${lahoreSlider[0]})`;
-        console.log("1st Section exist");
         let lahoreIndex = 0;
         setInterval(() => {
           lahoreIndex = (lahoreIndex + 1) % lahoreSlider.length;
@@ -182,7 +181,6 @@ function fetchImages() {
           img2[key].style.backgroundPosition = "bottom";
           img2[key].style.height = "228px";
           img2[key].style.overFlow = "hidden";
-          console.log(" 2nd Section exist");
 
           setInterval(() => {
             karachiIndex = (karachiIndex + 1) % karachiSlider.length;
@@ -202,7 +200,6 @@ function fetchImages() {
       if (img3) {
         let islamabadIndex = 0;
         img3.style.backgroundImage = `url(${islamabadSlider[islamabadIndex]})`;
-        console.log(" 3rd Section exist");
 
         setInterval(() => {
           islamabadIndex = (islamabadIndex + 1) % islamabadSlider.length;
@@ -221,7 +218,6 @@ function fetchImages() {
       if (img4) {
         let faisalAbadIndex = 0;
         img4.style.backgroundImage = `url(${faisalAbadSlider[faisalAbadIndex]})`;
-        console.log(" 4th Section exist");
 
         setInterval(() => {
           faisalAbadIndex = (faisalAbadIndex + 1) % faisalAbadSlider.length;
@@ -238,7 +234,6 @@ function fetchImages() {
       if (img5) {
         let islamabadIndex = 0;
         img5.style.backgroundImage = `url(${islamabadSlider[islamabadIndex]})`;
-        console.log(" 5th Section exist");
 
         setInterval(() => {
           islamabadIndex = (islamabadIndex + 1) % islamabadSlider.length;
@@ -282,14 +277,14 @@ themeButton.addEventListener('click', () => {
     moonIcon.classList.remove("d-none");
     darkLogos.forEach(logo => logo.classList.remove("d-none"));
     lightLogos.forEach(logo => logo.classList.add("d-none"));
-    console.log("Dark is active");
+    
   } else {
     html.setAttribute("data-color-mode", "light");
     moonIcon.classList.add("d-none");
     sunIcon.classList.remove("d-none");
     darkLogos.forEach(logo => logo.classList.add("d-none"));
     lightLogos.forEach(logo => logo.classList.remove("d-none"));
-    console.log("Light is active");
+    
   }
 });
 
@@ -311,10 +306,4 @@ let formattedDate = today.toLocaleDateString("en-US", options);
 dateElement.innerHTML = `${formattedDate} &nbsp; - &nbsp;`;
 
 
-/* API code for images */
 
-
-
-// fetch('https://fakestoreapi.com/products/1')
-//             .then(res=>res.json())
-//             .then(json=>console.log(json))
