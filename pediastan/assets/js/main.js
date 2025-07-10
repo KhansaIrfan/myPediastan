@@ -25,8 +25,6 @@ let moonIcon = document.querySelector(".fa-moon");
 let darkLogos = document.querySelectorAll(".dark-logo");
 let lightLogos = document.querySelectorAll(".light-logo");
 let html = document.documentElement; // <html> element
-let tableRow = document.getElementsByTagName("thead");
-console.log(tableRow);
 
 let isDark = false;
 
