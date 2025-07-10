@@ -385,13 +385,14 @@ span.material-symbols-outlined {
   border-bottom: none;
 }
 
-#currency-table, tr.border-bottom, tr{
+#currency-table {
   color: #000;
   border-bottom: 0.5px solid #313131 ;
 }
 
-#currency-table, tr:last-child{
+#currency-table tbody > tr:last-child{
   border: none;
+  width: 100%;
 }
 
 .facebook {
@@ -445,9 +446,10 @@ span.text-uppercase.social-title {
 
 .footer {
   border-top: 1px solid #191919;
-  padding: 40px 0px;
 }
-
+.footer-link-section{
+  padding: 60px 0px 0px 0px;
+}
 .columns {
   width: 31%;
   margin-right: 4%;
@@ -476,7 +478,21 @@ span.text-uppercase.social-title {
   border-bottom: 1px solid #252525 !important;
 }
 
+#footer-copyright *{
+  font-style: italic;
+  color: #888;
+  font-size: 14px;
+  font-family: var(--pcbody-font);
+}
 
+#footer-copyright a{
+  font-style: italic;
+  color: #1ea369 !important;
+}
+
+.footer-social-border{
+  border-bottom: 1px solid #000;
+}
 @media screen and (max-width:1080px) and (min-width: 1920px) {
   .mobile-complete-menu {
     display: none !important;

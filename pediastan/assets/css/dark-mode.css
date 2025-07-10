@@ -45,7 +45,7 @@ html[data-color-mode="dark"] #market-rates li,
 }
 
 html[data-color-mode="dark"] #market-rates li:last-child {
-  border-color: #000;
+  border: none;
 }
 
 html[data-color-mode="dark"] .featured-title h3 a {
@@ -60,7 +60,7 @@ html[data-color-mode="dark"] .dark-logo {
   display: block;
 }
 
-html[data-color-mode="dark"] #currency-table, tr.border-bottom, thead > tr > th.text-dark{
+html[data-color-mode="dark"] #currency-table, tr.border-bottom, thead > tr > th.text-dark, .border-bottom{
   color: #fff;
   border-bottom: 0.5px solid #313131 ;
 }
@@ -107,4 +107,19 @@ html[data-color-mode="dark"] .mobile-menu-item {
 
 html[data-color-mode="dark"] .section-1 {
   border: 1px solid #313131;
+}
+
+html[data-color-mode="dark"] .footer-link-section{
+  padding: 60px 0px 0px 0px;
+  margin-bottom: 30px;
+  background-color: #1a1a1a;
+  border-color: #313131;
+}
+
+html[data-color-mode="dark"] .footer-social-border{
+  border-bottom: 1px solid #313131;
+}
+
+html[data-color-mode="dark"] .footer-social-title{
+  color: #fff;
 }
