@@ -186,7 +186,7 @@ $(document).ready(function () {
     //API FOR MARKET RATES
   
     $.getJSON(pediastan + "market-rates/api/latest-rates", function (data, status) {
-  
+
     })
   });
   

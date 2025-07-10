@@ -385,13 +385,13 @@ span.material-symbols-outlined {
   border-bottom: none;
 }
 
-table tbody > tr:last-child{
-  border-color: #fff;
-  --bs-table-color: #000 !important;
+#currency-table, tr.border-bottom, tr{
+  color: #000;
+  border-bottom: 0.5px solid #313131 ;
 }
 
-table thead > tr:last-child {
-  border-color: var(--pcborder-clr) !important;
+#currency-table, tr:last-child{
+  border: none;
 }
 
 .facebook {
@@ -430,8 +430,7 @@ table thead > tr:last-child {
   padding: 6px;
 }
 
-.social,
-.social-title {
+span.text-uppercase.social-title {
   font-family: var(--pchead-font);
   font-weight: 500;
   font-size: 13px;

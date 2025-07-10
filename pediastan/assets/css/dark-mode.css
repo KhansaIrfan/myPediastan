@@ -60,35 +60,17 @@ html[data-color-mode="dark"] .dark-logo {
   display: block;
 }
 
-html[data-color-mode="dark"] .table,
-table tr:last-child {
-  --bs-table-color: #fff;
-  --bs-table-bg: transparent;
-  border-color: #313131;
-}
-
-html[data-color-mode="light"]table tbody>tr:last-child {
-  border-color: #000 !important;
-  --bs-table-color: #fff !important;
-}
-
-html[data-color-mode="dark"]table>thead>tr:last-child {
-  color: #fff !important;
-}
-
-html[data-color-mode="dark"] table tbody>tr:last-child,
-table thead>tr:last-child {
-  --bs-table-color: #fff !important;
-}
-
-html[data-color-mode="dark"] table thead>tr:last-child {
-  color: #fff !important;
-  border-color: #313131 !important;
-}
-
-html[data-color-mode="dark"] .social,
-.social-title {
+html[data-color-mode="dark"] #currency-table, tr.border-bottom, thead > tr > th.text-dark{
   color: #fff;
+  border-bottom: 0.5px solid #313131 ;
+}
+
+html[data-color-mode="dark"] span.text-uppercase.social-title  {
+  color: #fff;
+}
+
+html[data-color-mode="dark"] .sidebar-title {
+  background-color: #1a1a1a;
 }
 
 html[data-color-mode="dark"] .mobile-menu-button i.fa-solid.fa-bars {
