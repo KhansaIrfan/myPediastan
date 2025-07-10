@@ -385,14 +385,27 @@ span.material-symbols-outlined {
   border-bottom: none;
 }
 
-#currency-table {
+table#currency-table {
+  width: 100%;
+}
+
+#currency-table tr{
   color: #000;
-  border-bottom: 0.5px solid #313131 ;
+  border-bottom: 1px solid #dedede ;
+
 }
 
 #currency-table tbody > tr:last-child{
-  border: none;
+  border: none !important;
   width: 100%;
+}
+
+#currency-table thead > tr:last-child{
+  border-bottom: 1px solid #dedede !important;
+}
+
+thead, tbody, tfoot, tr, td, th {
+  padding: 8px;
 }
 
 .facebook {

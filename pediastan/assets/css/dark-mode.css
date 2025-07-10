@@ -60,9 +60,21 @@ html[data-color-mode="dark"] .dark-logo {
   display: block;
 }
 
-html[data-color-mode="dark"] #currency-table, tr.border-bottom, thead > tr > th.text-dark, .border-bottom{
+html[data-color-mode="dark"] table#currency-table {
+  width: 100%;
+}
+
+html[data-color-mode="dark"] #currency-table tr{
   color: #fff;
-  border-bottom: 0.5px solid #313131 ;
+  border-bottom: 1px solid #313131 ;
+  
+}
+html[data-color-mode="dark"] #currency-table tr:last-child{
+  border-bottom: none !important;
+}
+html[data-color-mode="dark"]  #currency-table thead > tr:last-child{
+  border-bottom: 1px solid #313131 !important;
+  width: 100%;
 }
 
 html[data-color-mode="dark"] span.text-uppercase.social-title  {
