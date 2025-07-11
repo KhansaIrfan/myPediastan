@@ -10,17 +10,27 @@ html[data-color-mode="light"] body {
 
 html[data-color-mode="dark"] .header-top {
   background-color: #1a1a1a;
+  border-bottom: 1px solid #313131;
 }
+
 
 html[data-color-mode="dark"] header.border-bottom {
   background-color: #000;
+  border-bottom: 1px solid #313131!important;
 }
+
 
 html[data-color-mode="dark"] .nav>ul>li>a {
   color: #fff !important;
 }
 
-/* html[data-color-mode="dark"] i#dark-mode{ color: #fff;} */
+html[data-color-mode="dark"] .theme{ box-shadow: #ffffff 0px 0px 15px 1px;}
+@media screen and (max-width: 768px) {
+  html[data-color-mode="dark"] li {
+      border-bottom: 1px solid #313131;
+      padding: 13px 0px;
+  }
+}
 
 html[data-color-mode="dark"] h3.text-uppercase.section-badge::after {
   border-right: 17px solid #000;

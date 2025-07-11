@@ -195,51 +195,99 @@ $(document).ready(function () {
       let forex_rates = "";
 
       for (let key in countryCurrency.forex_rates) {
-          forex_rates +=`
+        forex_rates += `
                      <tr>
                        <td class="text-start">${countryCurrency.forex_rates[key].currency}</td>
                        <td>Rs&nbsp;${countryCurrency.forex_rates[key].buying}</td>
                        <td>Rs&nbsp;${countryCurrency.forex_rates[key].selling}</td>
                      </tr>
                    `
-                  
+
       }
       $('.currency-rates').html(forex_rates);
     }
   });
 
 
-  //API FOR GOLD RATES
+  //API FOR RATES
   $.getJSON(pediastan + "market-rates/api/latest-rates", function (data, status) {
-  if (status === "success") {
-    $(".gold-rate").empty();
-    let goldRateApi = data.data;
-    
-    let goldRate = goldRateApi.bullion_rates;
+    if (status === "success") {
 
-    let goldHtml = "";
-      
-    goldRate.forEach(rate => {
-      goldHtml+=`
-              <li class="mb-2">
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex">
-                    <span class="material-symbols-outlined">
-                      chevron_forward
-                    </span>
-                    <a href="https://pediastan.com/market-rates/gold-price">
-                         Gold Rate/  ${rate.quantity}
-                    </a>
-                  </div>
-                  <a class="" href="https://pediastan.com/market-rates/gold-price">
-                    Rs.&nbsp; ${rate.price}
-                  </a>
-                </div>
-              </li>`
-              $(".gold-rate").html(goldHtml);
+      //API FOR GOLD RATES
+      $(".gold-rate").empty();
+      let RateApi = data.data;
+      let requiredUnits = ["1 Tola", "10 Gram", "1 Gram"];
+      let newUnitsArray;
+      let goldRate;
+      if ("bullion_rates" in RateApi) {
+        goldRate = RateApi.bullion_rates;
+        newUnitsArray = goldRate.filter(rate => requiredUnits.includes(rate.quantity));
+      }
 
-                                })
-                                   }
-                                     })
+      let goldHtml = "";
+      newUnitsArray.forEach(rate => {
+        goldHtml += `
+        <li class="mb-2">
+          <div class="d-flex justify-content-between">
+            <div class="d-flex">
+              <span class="material-symbols-outlined">
+                chevron_forward
+              </span>
+              <a href="https://pediastan.com/market-rates/gold-price">
+                   Gold Rate/  ${rate.quantity}
+              </a>
+            </div>
+            <a class="" href="https://pediastan.com/market-rates/gold-price">
+              Rs.&nbsp; ${rate.price}
+            </a>
+          </div>
+        </li>`
 
-                                        });
+      });
+      $(".gold-rate").html(goldHtml);
+
+
+
+       //API FOR FEUL RATES
+       $(".petrol-rate").empty();
+       let rateAPI = data.data;
+       let fuelRate;
+       let fuelRateHTML="";
+       let requiredText;
+       if("fuel_rates" in rateAPI){
+        fuelRate = rateAPI.fuel_rates
+        fuelRate.forEach(rate => {
+          requiredText = rate.fuel_type;
+          let modeifiedText = requiredText.replace("Price in Pakistan", "");
+          
+          fuelRateHTML += `
+                          <li class="mb-2">
+                            <div class="d-flex justify-content-between">
+                               <div class="d-flex">
+                                  <span class="material-symbols-outlined">
+                                    chevron_forward
+                                  </span>
+                                  <a href="https://www.pediastan.com/market-rates/fuel-price">
+                                    ${modeifiedText} /Liter
+                                  </a>
+                                </div>
+                                <a class="" href="https://pediastan.com/market-rates/fuel-price">
+                                  Rs. ${rate.price}
+                                </a>
+                            </div>
+                         </li>
+                         `
+          
+        });
+        $(".petrol-rate").html(fuelRateHTML);
+       }
+    }
+  })
+
+
+
+ 
+
+
+
+});
