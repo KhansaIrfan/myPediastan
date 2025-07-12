@@ -40,8 +40,20 @@ html[data-color-mode="dark"] span.material-symbols-outlined {
   color: #fff;
 }
 
-html[data-color-mode="dark"] #hero-section-link {
-  color: #000;
+html[data-color-mode="dark"] a#hero-section-link {
+  background-color: black;
+  color: #fff;
+  line-height: 1.4;
+}
+
+html[data-color-mode="dark"] .triangle {
+  width: 10px !important;
+  height: 0 !important;
+  border-top: 15px solid transparent !important;
+  border-bottom: 17px solid transparent !important;
+  border-right: 17px solid #000 !important;
+  top: 0 !important;
+  right: -1px !important;
 }
 
 

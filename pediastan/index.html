@@ -84,32 +84,32 @@
           <div class="nav d-lg-block d-md-none d-none">
             <ul class="d-inline-flex mb-0">
               <li>
-                <a href="./index.html" class="active text-uppercase me-3">
+                <a href="./index.html" class="active text-uppercase me-4">
                   Home
                 </a>
               </li>
               <li>
-                <a href="/articles.html" class="text-uppercase me-3">
+                <a href="/articles.html" class="text-uppercase me-4">
                   articles
                 </a>
               </li>
               <li>
-                <a href="/tv" class="text-uppercase me-3">
+                <a href="/tv" class="text-uppercase me-4">
                   TV
                 </a>
               </li>
               <li>
-                <a href="/mobile-packages" class="text-uppercase me-3">
+                <a href="/mobile-packages" class="text-uppercase me-4">
                   mobile packages
                 </a>
               </li>
               <li>
-                <a href="/open-market-rates" class="text-uppercase me-3">
+                <a href="/open-market-rates" class="text-uppercase me-4">
                   forex rates
                 </a>
               </li>
               <li>
-                <a href="/income-tax" class="text-uppercase me-3">
+                <a href="/income-tax" class="text-uppercase me-4">
                   tax calculator
                 </a>
               </li>
@@ -149,7 +149,7 @@
                   </a>
                 </div>
                 <div class="hero-section-title">
-                  <h3>
+                  <h3 id="big-hero-section">
                     <a href="https://www.pediastan.com/articles/pakistan-united-states-trade-deal/"
                       title="Pakistan, United States set to finalise their long-awaited trade deal soon"
                       id="hero-section-link">
@@ -254,23 +254,25 @@
 
 
     <!--2nd Section-->
-    <section class="mtb-65 mtb-59">
+    <section class="mtb-40 mtb-59">
       <div class="d-flex column-gap-xxl-5 column-gap-xl-5 column-gap-lg-5 ">
         <div class="latest-news">
-          <div class="p-4 ps-0 pe-md-0 pe-lg-0">
-            <h3 class="text-uppercase section-badge">
-              latest news
-            </h3>
-          </div>
-          <div class="featured-news d-flex flex-lg-row flex-column flex-md-column pe-0 column-gap-lg-4 row-gap-md-5"
+            <div class="section-badge">
+              <h3 class="text-uppercase title mb-0 ps-1">
+                latest news
+              </h3>
+              <div class="triangle"></div>
+            </div>
+          <div class="featured-news d-flex flex-lg-row flex-column flex-md-column pe-0 column-gap-lg-4 row-gap-md-5 mt-4"
             id="featured-latest-news">
-            <div class="d-flex flex-column featured-column">
+            <div class="d-flex flex-column featured-column border-bottom pb-4">
               <div class="featured-img">
                 <a href="https://www.pediastan.com/articles/pakistan-united-states-trade-deal/">
                   <img src="./assets/images/untitled-folder/0c725cd9-ebce-4db3-97cd-2fbf0ed6820e.webp" alt=""
                     class="w-100">
                 </a>
               </div>
+              <div class="border-bottom pb-4"></div>
 
               <div class="featured-title">
                 <h3>
@@ -362,7 +364,7 @@
                 <div class="featured-image col-3">
                   <a href="">
                     <img src="./assets/images/untitled-folder/0d30bb70-874c-4512-a98b-b63473455d68.jpeg" alt=""
-                      class="w-100 h-100 object-fit-cover">
+                      class="object-fit-cover" style="height: 100px; width: 100px;">
                   </a>
                 </div>
 
@@ -388,7 +390,7 @@
                 <div class="featured-image col-3">
                   <a href="">
                     <img src="./assets/images/untitled-folder/0d30bb70-874c-4512-a98b-b63473455d68.jpeg" alt=""
-                      class="w-100 h-100 object-fit-cover">
+                      class="object-fit-cover" style="height: 100px; width: 100px;">
                   </a>
                 </div>
 
@@ -414,7 +416,7 @@
                 <div class="featured-image col-3 me-3">
                   <a href="">
                     <img src="./assets/images/untitled-folder/0d30bb70-874c-4512-a98b-b63473455d68.jpeg" alt=""
-                      class="w-100 h-100 object-fit-cover h-100 object-fit-cover">
+                      class="object-fit-cover" style="height: 100px; width: 100px;">
                   </a>
                 </div>
 
@@ -440,7 +442,7 @@
                 <div class="featured-image col-3">
                   <a href="">
                     <img src="./assets/images/untitled-folder/0d30bb70-874c-4512-a98b-b63473455d68.jpeg" alt=""
-                      class="w-100 h-100 object-fit-cover">
+                      class="object-fit-cover" style="height: 100px; width: 100px;">
                   </a>
                 </div>
 
@@ -466,7 +468,7 @@
                 <div class="featured-image col-3">
                   <a href="">
                     <img src="./assets/images/untitled-folder/0d30bb70-874c-4512-a98b-b63473455d68.jpeg" alt=""
-                      class="w-100 h-100 object-fit-cover">
+                      class="object-fit-cover" style="height: 100px; width: 100px;">
                   </a>
                 </div>
 
@@ -792,10 +794,11 @@
             </div>
           </div>
 
-          <div class="p-4 ps-0">
-            <h3 class="text-uppercase section-badge">
-              LIVE TV
+          <div class="live-tv-section-badge mb-5 mt-5">
+            <h3 class="text-uppercase title mb-0 ps-1">
+              live tv
             </h3>
+            <div class="triangle" id="label-triangle"></div>
           </div>
 
           <div class="d-flex flex-wrap gap-xl-5 gap-lg-4 gap-md-4 gap-4 live-tv">
@@ -1212,7 +1215,7 @@
                 chevron_forward
               </span>
             </div>
-            <ul class="m-0 p-0 d-flex flex-column ps-4" id="market-rates">
+            <ul class="m-0 p-0 d-flex flex-column" id="market-rates">
               <li class="mb-2">
                 <div class="d-flex">
                   <span class="material-symbols-outlined">
@@ -1305,7 +1308,7 @@
                 chevron_forward
               </span>
             </div>
-            <ul class="m-0 p-0 d-flex flex-column ps-4" id="market-rates">
+            <ul class="m-0 p-0 d-flex flex-column" id="market-rates">
               <li class="mb-2">
                 <div class="d-flex">
                   <span class="material-symbols-outlined">
@@ -1391,7 +1394,7 @@
               <div class="footer-content d-flex flex-column">
                 <div class="logo">
                   <a href="https://www.pediastan.com/" class="d-flex">
-                    <img src="./assets/images/logo/logo.webp" alt="" width="50%" class="light-logo">
+                    <img src="./assets/images/logo/logo.webp" alt="" class="light-logo">
                     <img src="./assets/images/logo/light-logo.webp" alt="" class="dark-logo">
                   </a>
                 </div>
@@ -1411,7 +1414,7 @@
                 our portals
               </h3>
             </div>
-            <ul class="m-0 p-0 d-flex flex-column ps-4" id="market-rates">
+            <ul class="m-0 p-0 d-flex flex-column" id="market-rates">
               <li class="mb-2 footer-bottom">
                 <div class="d-flex">
                   <span class="material-symbols-outlined">
@@ -1491,7 +1494,7 @@
                 Categories
               </h3>
             </div>
-            <ul class="m-0 p-0 d-flex flex-column ps-4" id="market-rates">
+            <ul class="m-0 p-0 d-flex flex-column" id="market-rates">
               <li class="mb-2 footer-bottom">
                 <div class="d-flex">
                   <span class="material-symbols-outlined">
@@ -1610,11 +1613,11 @@
             </a>
           </div>
           <div class="d-flex">
-            <a href="https://x.com/Pediastan?t=IQtIrasPbEaoacHU2uN-aw&amp;s=09" target="_blank"
-              class="align-items-center column-gap-2 d-flex">
+            <a href="mailto:info@pediastan.com" target="_blank" class="align-items-center column-gap-2 d-flex">
               <i class="fa-solid fa-envelope" id="email"></i>
               <span class="text-uppercase footer-social-title d-xxl-block d-xl-block d-lg-block d-md-none d-none">
-                Email
+                  Email
+                </a>
               </span>
             </a>
           </div>

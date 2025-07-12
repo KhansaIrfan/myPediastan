@@ -52,11 +52,13 @@ $(document).ready(function () {
                     <span class="text-capitalize">cricket</span>
                   </div>
                   <div class="hero-section-title">
-                    <h3>
+                    <h3 id="big-hero-section">
                      <a href="${post0.link}" id="hero-section-link">${post0.title.rendered}</a>
                     </h3>
                   </div>
-                  <div class="date"><div class="date-bg">${formattedDate2}</div></div>
+                  <div class="date">
+                  <div class="date-bg">${formattedDate2}</div>
+                  </div>
                 </div>
               </div>
             </a>
@@ -152,9 +154,9 @@ $(document).ready(function () {
         horizontalFeaturedPosts += `
                           <div class="col-lg-6 col-12 mb-30">
                              <div class="d-flex horizontal-featured-news column-gap-3">
-                               <div class="featured-image col-3">
+                               <div class="featured-image">
                                 <a href="${post.link}">
-                                 <img src="${postFeaturedImage}" alt="" class="w-100 h-100 object-fit-cover">
+                                 <img src="${postFeaturedImage}" alt="" class="object-fit-cover" style="height: 100px; width: 130px;">
                                </a>
                              </div>
   
